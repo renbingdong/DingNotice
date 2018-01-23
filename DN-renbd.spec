@@ -3,12 +3,13 @@ Version:   1.0.0
 Release: 1
 Summary:  钉钉消息推送小工具
 
-Group: 
+Group:    Development/Libraries 
 License:  GPL
 URL:  https://github.com/renbingdong/DingNotice.git
-Source0:  %{name}.tgz
+Source0:  %{name}.tar.gz
 
 BuildRoot: %{_tmppath}/%{name}-%{version}
+BuildArch: noarch
 
 #制作rpm过程中依赖的软件包
 #BuildRequires:
@@ -21,7 +22,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}
 
 ##预处理
 %prep
-%setup -q -n %{name}
+%setup -q -c %{name}-%{version}
 
 
 ##构建
@@ -30,11 +31,13 @@ BuildRoot: %{_tmppath}/%{name}-%{version}
 
 ##安装
 %install
-
+rm -rf %{buildroot}
+mkdir -p %{getenv:HOME}/%{name}
+cp -r * %{getenv:HOME}/%{name}
 
 ##清理
 %clean
-
+rm -rf %{buildroot}
 
 ##rpm包包含的文件
 %files
