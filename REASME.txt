@@ -1,0 +1,32 @@
+文件目录
+    ---config
+        ---config.php
+    
+    ---core
+        ---Api.php
+
+    ---main.php
+
+    ---test.php
+
+    ---util
+        ---Logger.php
+        ---cache
+            ---AbstractCache.php
+            ---CacheFactory.php
+            ---FileCache.php
+        ---http
+            ---Http.php
+          
+
+config.php  是配置文件 
+Api.php 是操作钉钉的核心接口
+main.php 是脚本执行入口文件
+
+util 包下全是工具类
+   http:  封装的curl
+   cache:  使用文件缓存
+   logger: 日志记录
+
+
+目前本工具只实现一个简单推送消息的功能
