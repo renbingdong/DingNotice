@@ -17,6 +17,7 @@ $api = new Api();
 $accessToken = $api->getAccessToken();
 
 $owner = $config['owner'];
-$talkId = $api->getTalk($accessToken, "支付日志异常", $owner, array($owner));
+$chatName = $config['chat_name'];
+$talkId = $api->getTalk($accessToken, $chatName, $owner, array($owner));
 
 $result = $api->sendMessage($accessToken, $talkId, $message);

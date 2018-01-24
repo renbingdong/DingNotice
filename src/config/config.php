@@ -6,6 +6,7 @@ return array(
     'URL' => 'https://oapi.dingtalk.com',
     'FILE_CACHE' => '/tmp/dingnotice/',
     'CACHE_TYPE' => 'FileCache',
-    'error_log' => '/Users/renbingdong/log/dingnotice/error.log',
+    'error_log' => '/tmp/log/dingnotice/error.log',
     'owner' => 'manager1719',
+    'chat_name' => '支付日志异常',
 );
